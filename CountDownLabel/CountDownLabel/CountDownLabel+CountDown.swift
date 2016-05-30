@@ -40,7 +40,6 @@ extension CountDownLabel {
         let sec = maxSecond_private - min * 60
         let sec_Str = String(format: "%02d", sec)
         
-        text = min_Str + ":" + sec_Str
-        
+        text = prefix + min_Str + ":" + sec_Str
     }
 }

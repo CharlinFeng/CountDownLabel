@@ -9,6 +9,8 @@
 import UIKit
 
 class CountDownLabel: UILabel {
+    
+    var prefix: String = ""
 
     /** 秒数 */
     var maxSecond: Int = 0 {didSet{maxSecond_private = maxSecond}}
@@ -24,7 +26,7 @@ class CountDownLabel: UILabel {
     required init?(coder aDecoder: NSCoder) {super.init(coder: aDecoder); viewprepare()}
     
     func viewprepare(){
-        text = "00:00"
+        text = prefix + "00:00"
     }
     
     

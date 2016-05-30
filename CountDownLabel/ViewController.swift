@@ -12,12 +12,9 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var countLabel: CountDownLabel!
     
-
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        countLabel.prefix = "倒计时 "
-        countLabel.maxSecond = 3
         countLabel.start()
         countLabel.start()
         countLabel.countDownCompleteClosure = { [unowned self] in

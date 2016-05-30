@@ -10,14 +10,11 @@ import UIKit
 
 class CountDownLabel: UILabel {
     
-    var prefix: String = ""
+    @IBInspectable var prefix: String = ""
 
     /** 秒数 */
-    var maxSecond: Int = 0 {didSet{maxSecond_private = maxSecond}}
+    @IBInspectable var maxSecond: Int = 0 {didSet{maxSecond_private = maxSecond}}
     var maxSecond_private: Int = 0
-    
-    /** 当前秒数 */
-    private var currentSecond: Int = 0
     
     var timer: NSTimer!
 
